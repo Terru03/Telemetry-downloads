@@ -103,14 +103,14 @@ Price: EUR 99 one-time, VAT included
 - mobile rendering and export features
 - 2 device activations
 
-Price: EUR 29 one-time, VAT included
+Price: EUR 39 one-time, VAT included
 
 ### Bundle
 
 - desktop key
 - android key
 
-Price: EUR 119 one-time, VAT included
+Price: EUR 149 one-time, VAT included
 
 ## Supported Inputs
 
