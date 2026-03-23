@@ -80,7 +80,7 @@ Free mode is meant to let you test the workflow properly before buying a key.
 - starter overlay gauges and starter presets
 - GPX and CSV export
 - 3D globe visualization
-- export allowed while using 2 or fewer active overlays
+- export allowed while using 1 active overlay
 - max file size: 1 GB
 
 ### Pro Desktop
@@ -95,7 +95,7 @@ Free mode is meant to let you test the workflow properly before buying a key.
 - max file size: 20 GB
 - 2 device activations
 
-Price: EUR 99 one-time, VAT included
+Price: EUR 129 one-time, VAT included
 
 ### Pro Android
 
