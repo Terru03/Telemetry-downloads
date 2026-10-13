@@ -38,7 +38,7 @@ I wanted something that:
 - did not force a subscription just to unlock exports
 - made it easy to test the real app before paying
 
-The result is a single app model with a free mode and optional one-time Pro keys.
+The result is an app with a free mode and optional one-time Pro unlocks. Desktop and direct Android APK builds use license keys; separate Google Play builds use in-app billing.
 
 ## Available Apps
 
@@ -67,11 +67,13 @@ Direct download:
 
 - [Download Android Trial](https://github.com/Terru03/Telemetry-downloads/releases/latest/download/Telemetry-Extractor-Android.apk)
 
+This is a direct APK download. It does not establish that a Google Play listing is live. The [website](https://telemetry-extractor.pages.dev/#pricing) describes the Android transition to Google Play and the current launch status.
+
 ## Free Vs Pro
 
 The download is the real app, not a fake demo.
 
-Free mode is meant to let you test the workflow properly before buying a key.
+Free mode is meant to let you test the workflow properly before purchasing the matching Pro unlock.
 
 ### Free
 
@@ -101,16 +103,17 @@ Price: EUR 129 one-time, VAT included
 
 - same core on-device workflow unlocked for Android
 - mobile rendering and export features
-- 2 device activations
+- direct APK builds use compatible Android license keys and their activation limits
+- Google Play builds use an in-app Pro purchase, restored through the same Google Play account
 
-Price: EUR 39 one-time, VAT included
+Android sales are moving to Google Play. Check the [website pricing and launch information](https://telemetry-extractor.pages.dev/#pricing) for current availability and purchase details. The earlier EUR 39 Android key price is not a current offer in this download guide. Keep existing compatible keys for direct APK builds; Play builds do not accept pasted keys, and Play purchases do not unlock the direct APK.
 
-### Bundle
+### Legacy Bundle
 
 - desktop key
 - android key
 
-Price: EUR 149 one-time, VAT included
+The website describes retirement of the earlier Desktop + Android bundle during the Google Play migration. The earlier EUR 149 bundle price is not a current offer in this download guide. Existing compatible keys remain part of the direct-build licensing workflow. Check the [website](https://telemetry-extractor.pages.dev/#pricing) for current sales availability.
 
 ## Supported Inputs
 
@@ -231,8 +234,21 @@ Always use the `latest/download/...` links above or open the Releases tab:
 
 If a build does not start downloading, open the latest release page and download the asset directly from there.
 
-If the app opens but a feature stays locked, that usually means you are still in Free mode and need the matching Pro key for that platform.
+If the app opens but a feature stays locked, check the edition and distribution: desktop and direct APK builds need the matching compatible Pro key, while Google Play builds use the in-app purchase and Restore purchase flow.
 
 ## Current Release
 
 - [v1.0.0](https://github.com/Terru03/Telemetry-downloads/releases/tag/v1.0.0)
+
+## Verify v1.0.0 Downloads
+
+The version-specific [SHA256SUMS.txt](releases/v1.0.0/SHA256SUMS.txt) covers the two assets on the [v1.0.0 release page](https://github.com/Terru03/Telemetry-downloads/releases/tag/v1.0.0). Both published assets were downloaded and their SHA-256 values recomputed; the results match GitHub's release-asset metadata and the hashes in the release notes.
+
+Download the matching version, then compare each result with the corresponding filename in the manifest:
+
+```powershell
+Get-FileHash .\Telemetry-Extractor-Setup.exe -Algorithm SHA256
+Get-FileHash .\Telemetry-Extractor-Android.apk -Algorithm SHA256
+```
+
+Hexadecimal hash comparisons are case-insensitive. This manifest is for v1.0.0 only; check the release version before comparing a file downloaded through a `latest` link.

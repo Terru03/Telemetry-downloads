@@ -1,0 +1,2 @@
+08f675a00afdf34e940745ab44c40e68e169acc57fd6a1837d1c06407b297b54  Telemetry-Extractor-Android.apk
+7174e1caf29dd9b9e99da2257a87d2a62774588f8d0a44502eed422ec6839a9d  Telemetry-Extractor-Setup.exe
